@@ -17,3 +17,24 @@ I'ts very simple:
 >>> meter.export_energy
 1288.2
 ```
+
+# DOC
+```
+ |  current
+ |      Returns the current in Amperes
+ |  
+ |  export_energy
+ |      Returns the exported energy, in kWh
+ |  
+ |  frequency
+ |      Returns the frequency in Herz
+ |  
+ |  import_energy
+ |      Returns the imported energy, in kWh
+ |  
+ |  power
+ |      Returns the power in Watts. Positive is import. Negative power is exported
+ |  
+ |  voltage
+ |      Returns the voltage in Volts
+```
