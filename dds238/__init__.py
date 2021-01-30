@@ -42,6 +42,15 @@ class DDS238:
         """ Returns the power in Watts. Positive is import. Negative power is exported """
         return self._m.read_register(0xE, 0, signed=True)
 
+    @property
+    def reactive_power(self) -> float:
+        """ Return the reactive power in VAr """
+        return self._m.read_register(0xF)/1000
+
+    @property
+    def power_factor(self) -> float:
+        """ Returns the power factor (0-1 scalar)"""
+        return self._m.read_register(0x10)/1000
 
     @property
     def import_energy(self) -> float:
