@@ -28,19 +28,30 @@ I'ts very simple:
 ```
  |  current
  |      Returns the current in Amperes
- |  
+ |
  |  export_energy
  |      Returns the exported energy, in kWh
- |  
+ |
  |  frequency
  |      Returns the frequency in Herz
- |  
+ |
  |  import_energy
  |      Returns the imported energy, in kWh
- |  
+ |
  |  power
  |      Returns the power in Watts. Positive is import. Negative power is exported
- |  
+ |
+ |  power_factor
+ |      Returns the power factor (0-1 scalar)
+ |
+ |  reactive_power
+ |      Return the reactive power in VAr
+ |
  |  voltage
  |      Returns the voltage in Volts
+ |
+ |  ----------------------------------------------------------------------
+ |
+ |  change_address(self, address: int, baudrate=9600)
+ |      Change the modbus address and the baudrate of the current device. USE AT YOUR OWN RISK !
 ```
