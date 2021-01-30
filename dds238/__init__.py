@@ -53,6 +53,23 @@ class DDS238:
         """ Returns the exported energy, in kWh """
         return self._m.read_long(0x8)/100
 
+    def change_address(self, address: int, baudrate=9600):
+        """ Change the modbus address and the baudrate of the current device. USE AT YOUR OWN RISK ! """
+        baudrate_map = {
+            1200: 4,
+            2400: 3,
+            4800: 2,
+            9600: 1,
+        }
+        assert baudrate in baudrate_map
+        assert address < 256
+        assert address >= 1
+
+        payload = address * 256 + baudrate_map[baudrate]
+        # two bytes: address and baudrate
+        self._m.write_register(0x15, payload)
+
+
 
 if __name__ == '__main__':
     d = DDS238('/dev/ttyUSB0', 1)
