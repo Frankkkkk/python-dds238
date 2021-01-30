@@ -4,6 +4,12 @@ This library is very useful when reading the chinese DDS238 (and its variants: D
 This library supposes that you're using an USB-to-RS485 dongle. It doesn't work yet for modbus-over-TCP
 (though if you want to propose an MR, i'd accept it gladly !).
 
+# Installation
+To install the library, simply type:
+```
+$ pip3 install python-dds238
+```
+
 
 # Usage
 I'ts very simple:
