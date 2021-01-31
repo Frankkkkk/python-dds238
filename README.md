@@ -55,3 +55,8 @@ I'ts very simple:
  |  change_address(self, address: int, baudrate=9600)
  |      Change the modbus address and the baudrate of the current device. USE AT YOUR OWN RISK !
 ```
+
+# Baudrate reset
+In the case that you fuckup the meter's baudrate, you can reset it to 9600 by going to the baudrate menu and holding down the select button. Once the display shows `- Clr -` you must cut off the power to the meter (while holding the button). The meter will reset to `9600` Bd.
+
+You can reach a single meter on a bus by using id `0`.
